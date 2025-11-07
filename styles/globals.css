@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #34967C;
+  --secondary: #161117;
+  --accent: #F6F6F6;
+  --border: #EBEBEB;
+  
+  --font-geist-sans: 'Quicksand', Arial, Helvetica, sans-serif;
+
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-colorPrimary: var(--primary);
+  --color-colorSecondary: var(--secondary);
+  --color-coloraccent: var(--accent);
+  --color-colorborder: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --font-Quicksand: 'Quicksand', 'Outfit';
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
