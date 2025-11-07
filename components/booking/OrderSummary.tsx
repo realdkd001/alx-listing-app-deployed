@@ -1,6 +1,15 @@
 import { Star } from "@/constants";
+import Image from "next/image";
 
-const OrderSummary: React.FC<{ bookingDetails: any }> = ({ bookingDetails }) => {
+export interface BookingDetailsProp{
+  propertyName: string
+  startDate: string
+  totalNights: number
+  bookingFee: number
+  price: number
+}
+
+const OrderSummary: React.FC<{ bookingDetails: BookingDetailsProp }> = ({ bookingDetails }) => {
 
   return (
 
@@ -9,12 +18,12 @@ const OrderSummary: React.FC<{ bookingDetails: any }> = ({ bookingDetails }) => 
       <h2 className="text-2xl font-bold mb-4">Review Order Details</h2>
 
       <div className="flex flex-col gap-y-3 sm:gap-y-4 xl:gap-y-5">
-        <img src="/assets/image 3.png" alt="Property" className="w-full h-50 object-cover rounded-md" />
+        <Image src="/assets/image 3.png" alt="Property" className="w-full h-50 object-cover rounded-md" />
         <div className="flex flex-col gap-y-2">
           <h3 className="text-lg font-semibold">{bookingDetails.propertyName}</h3>
           <div className="text-sm gap-x-1 xl:gap-x-2 flex  items-center ">
             <div className="size-4">
-              <img src={Star} />
+              <Image src={Star} alt="" />
             </div>
             4.76 {" "}
             <span className="text-[#929292]">

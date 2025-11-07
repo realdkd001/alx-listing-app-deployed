@@ -1,5 +1,5 @@
 import { ReviewsProp } from "@/interfaces";
-
+import Image from "next/image";
 
 const ReviewSection: React.FC<{ reviews: ReviewsProp[] }> = ({ reviews }) => {
   return (
@@ -8,7 +8,7 @@ const ReviewSection: React.FC<{ reviews: ReviewsProp[] }> = ({ reviews }) => {
       {reviews.map((review, index) => (
         <div key={index} className="border-b pb-4 mb-4">
           <div className="flex items-center">
-            <img src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full mr-4" />
+            <Image src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full mr-4" />
             <div>
               <p className="font-bold">{review.name}</p>
               <p className="text-yellow-500">{review.rating} stars</p>

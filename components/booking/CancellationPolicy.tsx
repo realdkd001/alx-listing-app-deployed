@@ -31,7 +31,7 @@ function CancellationPolicy() {
                             Follow the house rules
                         </li>
                         <li>
-                            Treat your Host's home like your own
+                            Treat your Host&lsquo;s home like your own
                         </li>
                     </ul>
                 </div>

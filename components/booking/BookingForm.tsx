@@ -5,13 +5,13 @@ import {
   BillingAddressDetails } from "@/constants";
 
 
-const BookingForm = ({error, onSubmit, loading}:{error:string | null, loading: boolean, onSubmit: (e:any)=>void}) => (
+const BookingForm = ({error, onSubmit, loading}:{error:string | null, loading: boolean, onSubmit: (e:React.FormEvent<HTMLFormElement>)=>void}) => (
   <div className="bg-white pt-5 sm:pt-7 xl:pt-20  rounded-lg">
     <h2 className="text-xl pb-6 sm:pb-5 xl:pb-6 xl:text-3xl font-bold">Contact Detail</h2>
     <form onSubmit={onSubmit}>
       {/* Contact Informat+ion */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {ContactDetails.map((c, index) => (
+        {ContactDetails.map((c) => (
           <div key={c.label} className="mb-1" >
             <label className="font-bold mb-2 sm:mb-3 block">{c.label}</label>
             <input type={c.type}
@@ -93,7 +93,7 @@ const BookingForm = ({error, onSubmit, loading}:{error:string | null, loading: b
 
       <div className="grid grid-cols-2 gap-4 mt-4">
           {BillingAddressDetails.map((b, index)=>(
-            <div className="relative border border-[#E7E6E6]">
+            <div key={index} className="relative border border-[#E7E6E6]">
               <input id={b.label}
           type={b.type}
           className="peer w-full p-3 text-gray-900 placeholder-transparent 

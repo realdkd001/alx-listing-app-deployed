@@ -9,7 +9,7 @@ import { PropertyProps } from "@/interfaces";
 export default function PropertyPage() {
   const router = useRouter();
   const { propertyId } = router.query;
-  const [property, setProperty] = useState<PropertyProps | null>(null);
+  const [property, ] = useState<PropertyProps | null>(null);
 
 
   const [reviews, setReviews] = useState([]);
